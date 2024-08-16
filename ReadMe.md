@@ -130,4 +130,55 @@ Ensure that your Spark cluster is correctly configured with GPUs, and then run t
 - Modify the Spark configurations according to your environment (e.g., `yarn`, `k8s`).
 
 This example showcases how you can use `spark-nlp-gpu` to process text data with GPU acceleration in Spark.
+
+
+## Problems/Challenges
+```
+info] Updating 
+[info] Resolved  dependencies
+[warn] 
+[warn]  Note: Unresolved dependencies path:
+[error] sbt.librarymanagement.ResolveException: Error downloading com.johnsnowlabs.nlp:spark-nlp-gpu_2.13:5.4.1
+[error]   Not found
+[error]   Not found
+[error]   not found: /home/sean/.ivy2/localcom.johnsnowlabs.nlp/spark-nlp-gpu_2.13/5.4.1/ivys/ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/com/johnsnowlabs/nlp/spark-nlp-gpu_2.13/5.4.1/spark-nlp-gpu_2.13-5.4.1.pom
+[error]   not found: https://repos.spark-packages.org/com/johnsnowlabs/nlp/spark-nlp-gpu_2.13/5.4.1/spark-nlp-gpu_2.13-5.4.1.pom
+[error]         at lmcoursier.CoursierDependencyResolution.unresolvedWarningOrThrow(CoursierDependencyResolution.scala:344)
+[error]         at lmcoursier.CoursierDependencyResolution.$anonfun$update$38(CoursierDependencyResolution.scala:313)
+[error]         at scala.util.Either$LeftProjection.map(Either.scala:573)
+[error]         at lmcoursier.CoursierDependencyResolution.update(CoursierDependencyResolution.scala:313)
+[error]         at sbt.librarymanagement.DependencyResolution.update(DependencyResolution.scala:60)
+[error]         at sbt.internal.LibraryManagement$.resolve$1(LibraryManagement.scala:60)
+[error]         at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$12(LibraryManagement.scala:134)
+[error]         at sbt.util.Tracked$.$anonfun$lastOutput$1(Tracked.scala:74)
+[error]         at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$20(LibraryManagement.scala:147)
+[error]         at scala.util.control.Exception$Catch.apply(Exception.scala:228)
+[error]         at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11(LibraryManagement.scala:147)
+[error]         at sbt.internal.LibraryManagement$.$anonfun$cachedUpdate$11$adapted(LibraryManagement.scala:128)
+[error]         at sbt.util.Tracked$.$anonfun$inputChangedW$1(Tracked.scala:220)
+[error]         at sbt.internal.LibraryManagement$.cachedUpdate(LibraryManagement.scala:161)
+[error]         at sbt.Classpaths$.$anonfun$updateTask0$1(Defaults.scala:3801)
+[error]         at scala.Function1.$anonfun$compose$1(Function1.scala:49)
+[error]         at sbt.internal.util.$tilde$greater.$anonfun$$u2219$1(TypeFunctions.scala:63)
+[error]         at sbt.std.Transform$$anon$4.work(Transform.scala:69)
+[error]         at sbt.Execute.$anonfun$submit$2(Execute.scala:283)
+[error]         at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:24)
+[error]         at sbt.Execute.work(Execute.scala:292)
+[error]         at sbt.Execute.$anonfun$submit$1(Execute.scala:283)
+[error]         at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:265)
+[error]         at sbt.CompletionService$$anon$2.call(CompletionService.scala:65)
+[error]         at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error]         at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+[error]         at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+[error]         at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+[error]         at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+[error]         at java.base/java.lang.Thread.run(Thread.java:829)
+[error] (update) sbt.librarymanagement.ResolveException: Error downloading com.johnsnowlabs.nlp:spark-nlp-gpu_2.13:5.4.1
+[error]   Not found
+[error]   Not found
+[error]   not found: /home/sean/.ivy2/localcom.johnsnowlabs.nlp/spark-nlp-gpu_2.13/5.4.1/ivys/ivy.xml
+[error]   not found: https://repo1.maven.org/maven2/com/johnsnowlabs/nlp/spark-nlp-gpu_2.13/5.4.1/spark-nlp-gpu_2.13-5.4.1.pom
+[error]   not found: https://repos.spark-packages.org/com/johnsnowlabs/nlp/spark-nlp-gpu_2.13/5.4.1/spark-nlp-gpu_2.13-5.4.1.pom
+[error] Total time: 2 s, completed Aug 15, 2024, 10:40:16 PM
 ```
