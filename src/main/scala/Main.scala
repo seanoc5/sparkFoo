@@ -14,11 +14,11 @@ object Main {
       .appName("Spark NLP with GPU Example")
       .master("local[*]") // Use `yarn` or `spark://...` for distributed setup
       .config("spark.jars.packages", "com.johnsnowlabs.nlp:spark-nlp-gpu_2.12:4.2.0")
-      .config("spark.plugins", "com.nvidia.spark.SQLPlugin")
-      .config("spark.executor.resource.gpu.amount", "1")
-      .config("spark.executor.resource.gpu.discoveryScript", "/opt/libs/getGpusResources.sh")
-      .config("spark.task.resource.gpu.amount", "1")
-      .config("spark.sql.execution.arrow.pyspark.enabled", "true")
+//      .config("spark.plugins", "com.nvidia.spark.SQLPlugin")
+//      .config("spark.executor.resource.gpu.amount", "1")
+//      .config("spark.executor.resource.gpu.discoveryScript", "/opt/libs/getGpusResources.sh")
+//      .config("spark.task.resource.gpu.amount", "1")
+//      .config("spark.sql.execution.arrow.pyspark.enabled", "true")
       .getOrCreate()
 
     spark.sparkContext.setLogLevel("INFO")
